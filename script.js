@@ -22,15 +22,59 @@ function genPrefix(firstname) {
 function genFirstName(firstname) {
     const firstLetter = firstName.charAt(0).toLowerCase()
     if (firstLetter === 'a') {
-        return 'Michael'
+        return 'Abom'
     } else if (firstLetter === 'b') {
-        return 'David'
+        return 'Blaz'
     } else if (firstLetter === 'c') {
-        return 'Pim'
+        return 'Carb'
     } else if (firstLetter === 'd') {
-        return 'Edward'
+        return 'Darm'
+    } else if (firstLetter === 'e') {
+        return 'Ent'
+    } else if (firstLetter === 'f') {
+        return 'Froak'
+    } else if (firstLetter === 'g') {
+        return 'Gar'
+    } else if (firstLetter === 'h') {
+        return 'Hax'
+    } else if (firstLetter === 'i') {
+        return 'Ink'
+    } else if (firstLetter === 'j') {
+        return 'Jang'
+    } else if (firstLetter === 'k') {
+        return 'Kel'
+    } else if (firstLetter === 'l') {
+        return 'Luc'
+    } else if (firstLetter === 'm') {
+        return 'March'
+    } else if (firstLetter === 'n') {
+        return 'Nagan'
+    } else if (firstLetter === 'o') {
+        return 'Oct'
+    } else if (firstLetter === 'p') {
+        return 'Por'
+    } else if (firstLetter === 'q') {
+        return 'Qwil'
+    } else if (firstLetter === 'r') {
+        return 'Ramp'
+    } else if (firstLetter === 's') {
+        return 'Slug'
+    } else if (firstLetter === 't') {
+        return 'Tink'
+    } else if (firstLetter === 'u') {
+        return 'Umb'
+    } else if (firstLetter === 'v') {
+        return 'Vict'
+    } else if (firstLetter === 'w') {
+        return 'Wal'
+    } else if (firstLetter === 'x') {
+        return 'Xer'
+    } else if (firstLetter === 'y') {
+        return 'Yamp'
+    } else if (firstLetter === 'z') {
+        return 'Zer'
     } else {
-        return 'Jonsey' //default name
+        return 'Tink' //default name
     }
 }
 
