@@ -1,13 +1,16 @@
 body {
   background-color: #111;
 }
+
 h1 {
   color: white;
 }
+
 label {
   color: white;
 }
-/* CSS */
+
+/* button css */
 .button-85 {
   padding: 1em 2em;
   border: none;
@@ -21,6 +24,7 @@ label {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  text-align: center;
 }
 
 .button-85:before {
@@ -55,9 +59,11 @@ label {
   0% {
     background-position: 0 0;
   }
+
   50% {
     background-position: 400% 0;
   }
+
   100% {
     background-position: 0 0;
   }

@@ -75,17 +75,23 @@
           </div>
           <!-- FavoriteAnimal -->
           <div class="mb-3">
-            <label for="FavoriteAnimal" class="form-label">Favorite Animal</label>
+            <label for="FavoriteAnimal" class="form-label"
+              >Favorite Animal</label
+            >
             <input
               type="text"
               class="form-control"
-              id="FavoriteAnimal"
+              id="favoriteAnimal"
               placeholder="Enter your favorite animal"
             />
           </div>
+
           <!-- Button -->
-          <button class="button-85 w-100" role="button">Generate Name</button>
+          <div class="button-85 w-100" role="button" onclick="genFullName()">
+            Generate Name
+          </div>
         </form>
+        <div id="result"></div>
       </div>
     </main>
     <footer>

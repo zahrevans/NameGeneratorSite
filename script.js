@@ -61,5 +61,42 @@ function genLastName(lastName) {
     }
 }
 
-//generate suffix 
-function genSuffix(f)
+// Generate Suffix
+function genSuffix(favoriteAnimal) {
+    return `of the ${favoriteAnimal}`;
+}
+
+// Master Function to Assemble Full Name
+function genFullName() {
+    // Define Variable from Inputs
+    const firstName = document.getElementById("firstName").value.trim();
+    const lastName = document.getElementById("lastName").value.trim();
+    const roadType = document.getElementById("roadType").value;
+    const favoriteColor = document.getElementById("favoriteColor").value.trim();
+    const favoriteAnimal = document.getElementById("favoriteAnimal").value.trim();
+
+    // Generate each part of the name using Helper functions
+    const prefix = genPrefix(firstName);
+    const newFirstName = genFirstName(firstName);
+    const middleName = genMiddleName(roadType, favoriteColor);
+    const newLastName = genLastName(lastName);
+    const suffix = genSuffix(favoriteAnimal);
+
+    //function to captialized words
+    const capitalizePrefix = capitalize(prefix)
+    const capitalizeFirstName = capitalize(newFirstName)
+    const capitalizeMiddleName = capitalize(middleName)
+    const capitalizeLastName = capitalize(newLastName)
+    const capitalizeSuffix = capitalize(suffix)
+
+    // combine all parts
+    const fullName = `${capitalizePrefix} ${capitalizeFirstName} ${capitalizeMiddleName} ${capitalizeLastName} ${capitalizeSuffix}`;
+
+    //result
+    document.getElementById('result').textContent = fullName;
+}
+
+// capitalizer function
+function capitalize(word) {
+    return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+}
