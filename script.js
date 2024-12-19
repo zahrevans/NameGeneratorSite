@@ -4,7 +4,7 @@ const lastName = document.getElementById('lastName').value.trim()
 const classification = document.getElementById('classification').value.trim()
 const favoriteRegion = document.getElementById('region').value.trim()
 const favoriteAnimal = document.getElementById('favoriteAnimal').value.trim()
-
+const pokemonType = document.getElementById('type').value.trim()
 
 
 
@@ -172,6 +172,51 @@ function genLastName(lastName) {
         return 'ton' //default name
     }
 }
+// gen pokemon
+function genType(pokemonType) {
+    switch (pokemonType) {
+        case 'normal':
+            return 'normal';
+        case 'fire':
+            return 'fire';
+        case 'water':
+            return 'water';
+        case 'grass':
+            return 'grass';
+        case 'electric':
+            return 'electric';
+        case 'fighting':
+            return 'fighting';
+        case 'flying':
+            return 'flying';
+        case 'bug':
+            return 'bug';
+        case 'psychic':
+            return 'psychic';
+        case 'poison':
+            return 'poison';
+        case 'dark':
+            return 'dark';
+        case 'Ghost':
+            return 'Ghost';
+        case 'ground':
+            return 'ground';
+        case 'rock':
+            return 'rock';
+        case 'steel':
+            return 'steel';
+        case 'fairy':
+            return 'fairy';
+        case 'dragon':
+            return 'dragon';
+        case 'ice':
+            return 'ice';
+        default:
+            return 'Null'; //type : null for errors (real pokemon)
+    }
+}
+
+
 
 // Generate Suffix
 function genSuffix(favoriteAnimal) {
