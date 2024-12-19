@@ -2,20 +2,41 @@
 const firstName = document.getElementById('firstName').value.trim()
 const lastName = document.getElementById('lastName').value.trim()
 const classification = document.getElementById('classification').value.trim()
-const favoriteColor = document.getElementById('favoriteColor').value.trim()
+const favoriteRegion = document.getElementById('region').value.trim()
 const favoriteAnimal = document.getElementById('favoriteAnimal').value.trim()
 
 
 
 
 //generate prefix of Name
-function genPrefix(firstname) {
-
+function genPrefix(favoriteRegion) {
+    if (favoriteRegion === 'kanto') {
+        return "Starter"
+    } else if (favoriteRegion === 'johto') {
+        return "Legendary";
+    } else if (favoriteRegion === 'hoenn') {
+        return "Shiny";
+    } else if (favoriteRegion === 'sinnoh') {
+        return "Cosmic";
+    } else if (favoriteRegion === 'unova') {
+        return "Mythical";
+    } else if (favoriteRegion === 'kalos') {
+        return "Mega";
+    } else if (favoriteRegion === 'alola') {
+        return "Paradox";
+    } else if (favoriteRegion === 'galar') {
+        return "Sub-Legendary";
+    } else if (favoriteRegion === 'paldea') {
+        return "Pseudo-Legendary";
+    } else {
+        return "common"
+    }
 }
 
 //generate first name of name
-function genFirstName(firstname) {
+function genFirstName(firstName) {
     const firstLetter = firstName.charAt(0).toLowerCase()
+    console.log(firstLetter)
     if (firstLetter === 'a') {
         return 'Abom'
     } else if (firstLetter === 'b') {
@@ -71,6 +92,7 @@ function genFirstName(firstname) {
     } else {
         return 'Tink' //default name
     }
+
 }
 
 //generate middle name 
@@ -147,7 +169,7 @@ function genLastName(lastName) {
     } else if (lastLetter === 'j' || lastLetter === 'q') {
         return 'ram'
     } else {
-        return 'Ton' //default name
+        return 'ton' //default name
     }
 }
 
@@ -162,11 +184,11 @@ function genFullName() {
     const firstName = document.getElementById("firstName").value.trim();
     const lastName = document.getElementById("lastName").value.trim();
     const classification = document.getElementById("classification").value;
-    const favoriteColor = document.getElementById("favoriteColor").value.trim();
+    const favoriteRegion = document.getElementById("region").value.trim();
     const favoriteAnimal = document.getElementById("favoriteAnimal").value.trim();
 
     // Generate each part of the name using Helper functions
-    const prefix = genPrefix(firstName);
+    const prefix = genPrefix(favoriteRegion);
     const newFirstName = genFirstName(firstName);
     const middleName = genMiddleName(classification);
     const newLastName = genLastName(lastName);
@@ -175,12 +197,10 @@ function genFullName() {
     //function to captialized words
     const capitalizePrefix = capitalize(prefix)
     const capitalizeFirstName = capitalize(newFirstName)
-    const capitalizeMiddleName = capitalize(middleName)
-    const capitalizeLastName = capitalize(newLastName)
     const capitalizeSuffix = capitalize(suffix)
 
     // combine all parts
-    const fullName = `${capitalizePrefix} ${capitalizeFirstName}${capitalizeMiddleName}${capitalizeLastName} ${capitalizeSuffix}`;
+    const fullName = `${capitalizePrefix} ${capitalizeFirstName}${middleName}${newLastName} ${capitalizeSuffix}`;
 
     //result
     document.getElementById('result').textContent = fullName;
@@ -188,5 +208,6 @@ function genFullName() {
 
 // capitalizer function
 function capitalize(word) {
+    console.log(word)
     return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
 }
