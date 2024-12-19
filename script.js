@@ -5,7 +5,7 @@ const classification = document.getElementById('classification').value.trim()
 const favoriteRegion = document.getElementById('region').value.trim()
 const favoriteAnimal = document.getElementById('favoriteAnimal').value.trim()
 const favoriteType = document.getElementById('type').value.trim()
-
+const preferredStat = document.getElementById('nature').value.trim()
 
 
 //generate prefix of Name
@@ -172,7 +172,8 @@ function genLastName(lastName) {
         return 'ton' //default name
     }
 }
-// gen pokemon
+
+// gen pokemon type
 function genType(favoriteType) {
     switch (favoriteType) {
         case 'normal':
@@ -216,6 +217,28 @@ function genType(favoriteType) {
     }
 }
 
+//generate nature 
+function genNature(favoriteType, preferredStat) {
+    // Assign mappings for stat preferences
+    const natureMap = {
+        Attack: { fire: "Adamant", fighting: "Brave", dark: "Naughty", normal: "Lonely" },
+        Defense: { rock: "Relaxed", steel: "Impish", ground: "Bold", ice: "Lax" },
+        SpecialAttack: { psychic: "Modest", electric: "Mild", fairy: "Quiet", dragon: "Rash" },
+        SpecialDefense: { water: "Calm", grass: "Gentle", ghost: "Sassy", bug: "Careful" },
+        Speed: { flying: "Jolly", fire: "Naive", electric: "Timid", ghost: "Hasty" },
+        Neutral: { any: ["Hardy", "Serious", "Bashful", "Docile", "Quirky"] },
+    };
+
+    // Assign nature based on type and stat preference
+    if (natureMap[preferredStat] && natureMap[preferredStat][favoriteType]) {
+        return natureMap[preferredStat][favoriteType];
+    }
+
+    // If no match, assign a neutral nature
+    const neutralNatures = natureMap.Neutral.any;
+    const randomIndex = Math.floor(Math.random() * neutralNatures.length);
+    return neutralNatures[randomIndex]; // Random neutral nature
+}
 
 
 // Generate Suffix
