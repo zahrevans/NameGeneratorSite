@@ -4,7 +4,7 @@ const lastName = document.getElementById('lastName').value.trim()
 const classification = document.getElementById('classification').value.trim()
 const favoriteRegion = document.getElementById('region').value.trim()
 const favoriteAnimal = document.getElementById('favoriteAnimal').value.trim()
-const pokemonType = document.getElementById('type').value.trim()
+const favoriteType = document.getElementById('type').value.trim()
 
 
 
@@ -173,8 +173,8 @@ function genLastName(lastName) {
     }
 }
 // gen pokemon
-function genType(pokemonType) {
-    switch (pokemonType) {
+function genType(favoriteType) {
+    switch (favoriteType) {
         case 'normal':
             return 'normal';
         case 'fire':
