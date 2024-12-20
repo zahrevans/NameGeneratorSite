@@ -3,9 +3,10 @@ const firstName = document.getElementById('firstName').value.trim()
 const lastName = document.getElementById('lastName').value.trim()
 const classification = document.getElementById('classification').value.trim()
 const favoriteRegion = document.getElementById('region').value.trim()
-const favoriteAnimal = document.getElementById('favoriteAnimal').value.trim()
-const favoriteType = document.getElementById('type').value.trim()
+
+const favoriteType = document.getElementById('favoriteType').value.trim()
 const preferredStat = document.getElementById('nature').value.trim()
+
 
 
 //generate prefix of Name
@@ -213,7 +214,7 @@ function genType(favoriteType) {
         case 'ice':
             return 'ice';
         default:
-            return 'Null'; //type : null for errors (real pokemon)
+            return 'none'; // impossible value
     }
 }
 
@@ -240,11 +241,162 @@ function genNature(favoriteType, preferredStat) {
     return neutralNatures[randomIndex]; // Random neutral nature
 }
 
+//generate gym
+function genGym(favoriteRegion) {
+    // Generate a random number between 1 and 8
+    const gymNumber = Math.floor(Math.random() * 8) + 1;
 
-// Generate Suffix
-function genSuffix(favoriteAnimal) {
-    return `of the ${favoriteAnimal}`;
+    // Determine the gym based on the region and gym number
+    if (favoriteRegion === "kanto" && gymNumber === 1) {
+        return "Boulder";
+    } else if (favoriteRegion === "kanto" && gymNumber === 2) {
+        return "Cascade";
+    } else if (favoriteRegion === "kanto" && gymNumber === 3) {
+        return "Thunder";
+    } else if (favoriteRegion === "kanto" && gymNumber === 4) {
+        return "Rainbow";
+    } else if (favoriteRegion === "kanto" && gymNumber === 5) {
+        return "Soul";
+    } else if (favoriteRegion === "kanto" && gymNumber === 6) {
+        return "Marsh";
+    } else if (favoriteRegion === "kanto" && gymNumber === 7) {
+        return "Volcano";
+    } else if (favoriteRegion === "kanto" && gymNumber === 8) {
+        return "Earth";
+    } else if (favoriteRegion === "johto" && gymNumber === 1) {
+        return "Zephyr";
+    } else if (favoriteRegion === "johto" && gymNumber === 2) {
+        return "Hive";
+    } else if (favoriteRegion === "johto" && gymNumber === 3) {
+        return "Plain";
+    } else if (favoriteRegion === "johto" && gymNumber === 4) {
+        return "Fog";
+    } else if (favoriteRegion === "johto" && gymNumber === 5) {
+        return "Storm";
+    } else if (favoriteRegion === "johto" && gymNumber === 6) {
+        return "Mineral";
+    } else if (favoriteRegion === "johto" && gymNumber === 7) {
+        return "Glacier";
+    } else if (favoriteRegion === "johto" && gymNumber === 8) {
+        return "Rising";
+    } else if (favoriteRegion === "hoenn" && gymNumber === 1) {
+        return "Stone";
+    } else if (favoriteRegion === "hoenn" && gymNumber === 2) {
+        return "Knuckle";
+    } else if (favoriteRegion === "hoenn" && gymNumber === 3) {
+        return "Dynamo";
+    } else if (favoriteRegion === "hoenn" && gymNumber === 4) {
+        return "Heat";
+    } else if (favoriteRegion === "hoenn" && gymNumber === 5) {
+        return "Balance";
+    } else if (favoriteRegion === "hoenn" && gymNumber === 6) {
+        return "Feather";
+    } else if (favoriteRegion === "hoenn" && gymNumber === 7) {
+        return "Mind";
+    } else if (favoriteRegion === "hoenn" && gymNumber === 8) {
+        return "Rain";
+    } else if (favoriteRegion === "sinnoh" && gymNumber === 1) {
+        return "Coal";
+    } else if (favoriteRegion === "sinnoh" && gymNumber === 2) {
+        return "Forest";
+    } else if (favoriteRegion === "sinnoh" && gymNumber === 3) {
+        return "Cobble";
+    } else if (favoriteRegion === "sinnoh" && gymNumber === 4) {
+        return "Fen";
+    } else if (favoriteRegion === "sinnoh" && gymNumber === 5) {
+        return "Relic";
+    } else if (favoriteRegion === "sinnoh" && gymNumber === 6) {
+        return "Mine";
+    } else if (favoriteRegion === "sinnoh" && gymNumber === 7) {
+        return "Icicle";
+    } else if (favoriteRegion === "sinnoh" && gymNumber === 8) {
+        return "Beacon";
+    } else if (favoriteRegion === "unova" && gymNumber === 1) {
+        return "Trio";
+    } else if (favoriteRegion === "unova" && gymNumber === 2) {
+        return "Basic";
+    } else if (favoriteRegion === "unova" && gymNumber === 3) {
+        return "Insect";
+    } else if (favoriteRegion === "unova" && gymNumber === 4) {
+        return "Bolt";
+    } else if (favoriteRegion === "unova" && gymNumber === 5) {
+        return "Quake";
+    } else if (favoriteRegion === "unova" && gymNumber === 6) {
+        return "Jet";
+    } else if (favoriteRegion === "unova" && gymNumber === 7) {
+        return "Freeze";
+    } else if (favoriteRegion === "unova" && gymNumber === 8) {
+        return "Legend";
+    } else if (favoriteRegion === "kalos" && gymNumber === 1) {
+        return "Bug";
+    } else if (favoriteRegion === "kalos" && gymNumber === 2) {
+        return "Cliff";
+    } else if (favoriteRegion === "kalos" && gymNumber === 3) {
+        return "Rumble";
+    } else if (favoriteRegion === "kalos" && gymNumber === 4) {
+        return "Plant";
+    } else if (favoriteRegion === "kalos" && gymNumber === 5) {
+        return "Voltage";
+    } else if (favoriteRegion === "kalos" && gymNumber === 6) {
+        return "Fairy";
+    } else if (favoriteRegion === "kalos" && gymNumber === 7) {
+        return "Psychic";
+    } else if (favoriteRegion === "kalos" && gymNumber === 8) {
+        return "Iceberg";
+    } else if (favoriteRegion === "alola" && gymNumber === 1) {
+        return "Gumshoos";
+    } else if (favoriteRegion === "alola" && gymNumber === 2) {
+        return "Wishiwashi";
+    } else if (favoriteRegion === "alola" && gymNumber === 3) {
+        return "Marowak";
+    } else if (favoriteRegion === "alola" && gymNumber === 4) {
+        return "Lurantis";
+    } else if (favoriteRegion === "alola" && gymNumber === 5) {
+        return "Vikavolt";
+    } else if (favoriteRegion === "alola" && gymNumber === 6) {
+        return "Mimikyu";
+    } else if (favoriteRegion === "alola" && gymNumber === 7) {
+        return "Kommo-o";
+    } else if (favoriteRegion === "alola" && gymNumber === 8) {
+        return "Island";
+    } else if (favoriteRegion === "galar" && gymNumber === 1) {
+        return "Turffield";
+    } else if (favoriteRegion === "galar" && gymNumber === 2) {
+        return "Hulbury";
+    } else if (favoriteRegion === "galar" && gymNumber === 3) {
+        return "Motostoke";
+    } else if (favoriteRegion === "galar" && gymNumber === 4) {
+        return "Stow-on-Side";
+    } else if (favoriteRegion === "galar" && gymNumber === 5) {
+        return "Ballonlea";
+    } else if (favoriteRegion === "galar" && gymNumber === 6) {
+        return "Circhester";
+    } else if (favoriteRegion === "galar" && gymNumber === 7) {
+        return "Spikemuth";
+    } else if (favoriteRegion === "galar" && gymNumber === 8) {
+        return "Hammerlocke";
+    } else if (favoriteRegion === "paldea" && gymNumber === 1) {
+        return "Cortondo";
+    } else if (favoriteRegion === "paldea" && gymNumber === 2) {
+        return "Artazon";
+    } else if (favoriteRegion === "paldea" && gymNumber === 3) {
+        return "Levincia";
+    } else if (favoriteRegion === "paldea" && gymNumber === 4) {
+        return "Cascarrafa";
+    } else if (favoriteRegion === "paldea" && gymNumber === 5) {
+        return "Medali";
+    } else if (favoriteRegion === "paldea" && gymNumber === 6) {
+        return "Montenevera";
+    } else if (favoriteRegion === "paldea" && gymNumber === 7) {
+        return "Alfornada";
+    } else if (favoriteRegion === "paldea" && gymNumber === 8) {
+        return "Glaseado";
+    } else {
+        return "Unknown Gym";
+    }
 }
+
+
 
 // Master Function to Assemble Full Name
 function genFullName() {
@@ -253,22 +405,30 @@ function genFullName() {
     const lastName = document.getElementById("lastName").value.trim();
     const classification = document.getElementById("classification").value;
     const favoriteRegion = document.getElementById("region").value.trim();
-    const favoriteAnimal = document.getElementById("favoriteAnimal").value.trim();
+
+    const favoriteType = document.getElementById("favoriteType").value.trim();
+    const preferredNature = document.getElementById("nature").value.trim();
+
 
     // Generate each part of the name using Helper functions
     const prefix = genPrefix(favoriteRegion);
     const newFirstName = genFirstName(firstName);
     const middleName = genMiddleName(classification);
     const newLastName = genLastName(lastName);
-    const suffix = genSuffix(favoriteAnimal);
 
+    const type = genType(favoriteType);
+    const nature = genNature(favoriteType, preferredNature);
+    const gym = genGym(favoriteRegion)
     //function to captialized words
     const capitalizePrefix = capitalize(prefix)
     const capitalizeFirstName = capitalize(newFirstName)
-    const capitalizeSuffix = capitalize(suffix)
+
+    const capitalizeType = capitalize(type)
+    const capitalizeNature = capitalize(nature)
+    const capitalizeGym = capitalize(gym)
 
     // combine all parts
-    const fullName = `${capitalizePrefix} ${capitalizeFirstName}${middleName}${newLastName} ${capitalizeSuffix}`;
+    const fullName = `A  ${capitalizeType} Type ${capitalizePrefix} Pokemon Named ${capitalizeFirstName}${middleName}${newLastName} The  ${capitalizeNature} of The ${capitalizeGym} Gym`;
 
     //result
     document.getElementById('result').textContent = fullName;
