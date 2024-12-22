@@ -222,13 +222,14 @@ function genType(favoriteType) {
 function genNature(favoriteType, preferredStat) {
     // Assign mappings for stat preferences
     const natureMap = {
-        Attack: { fire: "Adamant", fighting: "Brave", dark: "Naughty", normal: "Lonely" },
-        Defense: { rock: "Relaxed", steel: "Impish", ground: "Bold", ice: "Lax" },
-        SpecialAttack: { psychic: "Modest", electric: "Mild", fairy: "Quiet", dragon: "Rash" },
-        SpecialDefense: { water: "Calm", grass: "Gentle", ghost: "Sassy", bug: "Careful" },
-        Speed: { flying: "Jolly", fire: "Naive", electric: "Timid", ghost: "Hasty" },
+        Attack: { fire: "Adamant", fighting: "Brave", dark: "Naughty", rock: "Lonely", steel: "Impish", dragon: "Rash", normal: "Lonely" },
+        Defense: { rock: "Relaxed", steel: "Impish", ground: "Bold", ice: "Lax", grass: "Calm", poison: "Gentle", bug: "Careful", fairy: "Gentle" },
+        SpecialAttack: { psychic: "Modest", electric: "Mild", fairy: "Quiet", dragon: "Rash", water: "Gentle", fire: "Naive", ghost: "Quiet", ice: "Mild" },
+        SpecialDefense: { water: "Calm", grass: "Gentle", ghost: "Sassy", bug: "Careful", steel: "Docile", fairy: "Calm", ice: "Relaxed", poison: "Careful" },
+        Speed: { flying: "Jolly", fire: "Naive", electric: "Timid", ghost: "Hasty", bug: "Quirky", dark: "Serious", water: "Gentle", psychic: "Timid" },
         Neutral: { any: ["Hardy", "Serious", "Bashful", "Docile", "Quirky"] },
     };
+    
 
     // Assign nature based on type and stat preference
     if (natureMap[preferredStat] && natureMap[preferredStat][favoriteType]) {
