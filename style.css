@@ -9,18 +9,19 @@ h1 {
 label {
   color: white;
 }
-
+.row { display: flex; flex-wrap: nowrap; } 
+.col { flex: 1; padding: 0 0.5rem; }
 .form-container {
   background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 20px;
   margin: 40px auto;
-  max-width: 600px;
+  max-width: 600%;
 }
 .form-label {
   font-weight: bold;
-  color: #495057;
+  color: #dcdcdc;
 }
 
 .form-control,
@@ -121,4 +122,17 @@ label {
   left: 0;
   top: 0;
   border-radius: 10px;
+}
+
+/*modal css*/
+.modal-content {
+  background-color: #2e2e2e;
+}
+/* box css */
+.box {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 5rem;
+  border: 3px solid rgba(255, 255, 255, 0.1);
 }

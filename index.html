@@ -27,108 +27,141 @@
       <div class="container">
         <!-- Greeting and Instructions -->
         <div class="text-center mb-4">
-          <h1>What's your Fantasy Hero Name?</h1>
+          <h1>What's your Pokemon Name?</h1>
           <p>Fill out the form below to generate your fantasy name!</p>
         </div>
         <!-- Information input form -->
-        <form id="fantasyForm" class="mb-4">
-          <!-- First Name Input -->
-          <div class="mb-3">
-            <label for="firstName" class="form-label">First Name</label>
-            <input
-              type="text"
-              class="form-control"
-              id="firstName"
-              placeholder="Enter your first name"
-            />
-          </div>
-          <!-- Last Name Input-->
-          <div class="mb-3">
-            <label for="lastName" class="form-label">Last Name</label>
-            <input
-              type="text"
-              class="form-control"
-              id="lastName"
-              placeholder="Enter your last name"
-            />
-          </div>
-          <!--Get Type-->
+        <div class="box">
+          <form id="fantasyForm" class="mb-4">
+            <!-- First Name Input -->
+            <div class="mb-3 row">
+              <div class="col">
+                <label for="firstName" class="form-label">First Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstName"
+                  placeholder="Enter your first name"
+                />
+              </div>
+              <!-- Last Name Input-->
+              <div class="col">
+                <label for="lastName" class="form-label">Last Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastName"
+                  placeholder="Enter your last name"
+                />
+              </div>
+            </div>
+            <!--Get Type-->
 
-          <div class="mb-3">
-            <label for="favoriteType" class="form-label"
-              >Whats Your Personality</label
-            >
-            <select id="favoriteType" class="form-select">
-              <option value="normal">Basic</option>
-              <option value="fire">Passionate</option>
-              <option value="water">Fluid</option>
-              <option value="electric">Shocking</option>
-              <option value="flying">Free-Spirited</option>
-              <option value="grass">Nurturing</option>
-              <option value="bug">Nimble</option>
-              <option value="poison">Toxic</option>
-              <option value="psychic">Smart</option>
-              <option value="dark">Bleak</option>
-              <option value="ghost">Spooky</option>
-              <option value="ground">Steady</option>
-              <option value="rock">Strong</option>
-              <option value="steel">Resilient</option>
-              <option value="fairy">Enchanting</option>
-              <option value="dragon">Majestic</option>
-              <option value="fighting">Brute</option>
-              <option value="ice">Cold</option>
-            </select>
-          </div>
-          <!--get nature -->
-          <div class="mb-3">
-            <label for="nature" class="form-label">Choose Nature Type</label>
-            <select id="nature" class="form-select">
-              <option value="Attack">Attack</option>
-              <option value="Defence">Defence</option>
-              <option value="SpecialDefence">Special Defence</option>
-              <option value="SpecialAttack">Special Attack</option>
-              <option value="Speed">Speed</option>
-              <option value="Neutral">Neutral</option>
-            </select>
-          </div>
-          <!-- Get Class-->
-          <div class="mb-3">
-            <label for="classification" class="form-label"
-              >Choose Pokemon Type</label
-            >
-            <select id="classification" class="form-select">
-              <option value="leg">Legendary</option>
-              <option value="myth">Mythical</option>
-              <option value="start">Starter</option>
-              <option value="ub">Ultra Beast</option>
-              <option value="para">Paradox</option>
-              <option value="mega">Mega</option>
-            </select>
-          </div>
-          <!-- Favorite region -->
-          <div class="mb-3">
-            <label for="region" class="form-label"
-              >Whats Your Favorite Region</label
-            >
-            <select id="region" class="form-select">
-              <option value="kanto">Kanto</option>
-              <option value="johto">Johto</option>
-              <option value="hoenn">Hoenn</option>
-              <option value="sinnoh">Sinnoh</option>
-              <option value="unova">Unova</option>
-              <option value="kalos">Kalos</option>
-              <option value="alola">Alola</option>
-              <option value="galar">Galar</option>
-              <option value="paldea">Paldea</option>
-            </select>
-          </div>
+            <div class="mb-3">
+              <label for="favoriteType" class="form-label"
+                >Whats Your Personality</label
+              >
+              <select id="favoriteType" class="form-select">
+                <option value="normal">Basic</option>
+                <option value="fire">Passionate</option>
+                <option value="water">Fluid</option>
+                <option value="electric">Shocking</option>
+                <option value="flying">Free-Spirited</option>
+                <option value="grass">Nurturing</option>
+                <option value="bug">Nimble</option>
+                <option value="poison">Toxic</option>
+                <option value="psychic">Smart</option>
+                <option value="dark">Bleak</option>
+                <option value="ghost">Spooky</option>
+                <option value="ground">Steady</option>
+                <option value="rock">Strong</option>
+                <option value="steel">Resilient</option>
+                <option value="fairy">Enchanting</option>
+                <option value="dragon">Majestic</option>
+                <option value="fighting">Brute</option>
+                <option value="ice">Cold</option>
+              </select>
+            </div>
+            <!--get nature -->
+            <div class="mb-3">
+              <label for="nature" class="form-label">Choose Nature Type</label>
+              <select id="nature" class="form-select">
+                <option value="Attack">Attack</option>
+                <option value="Defence">Defence</option>
+                <option value="SpecialDefence">Special Defence</option>
+                <option value="SpecialAttack">Special Attack</option>
+                <option value="Speed">Speed</option>
+                <option value="Neutral">Neutral</option>
+              </select>
+            </div>
+            <!-- Get Class-->
+            <div class="mb-3">
+              <label for="classification" class="form-label"
+                >Choose Pokemon Type</label
+              >
+              <select id="classification" class="form-select">
+                <option value="leg">Legendary</option>
+                <option value="myth">Mythical</option>
+                <option value="start">Starter</option>
+                <option value="ub">Ultra Beast</option>
+                <option value="para">Paradox</option>
+                <option value="mega">Mega</option>
+              </select>
+            </div>
+            <!-- Favorite region -->
+            <div class="mb-3">
+              <label for="region" class="form-label"
+                >Whats Your Favorite Region</label
+              >
+              <select id="region" class="form-select">
+                <option value="kanto">Kanto</option>
+                <option value="johto">Johto</option>
+                <option value="hoenn">Hoenn</option>
+                <option value="sinnoh">Sinnoh</option>
+                <option value="unova">Unova</option>
+                <option value="kalos">Kalos</option>
+                <option value="alola">Alola</option>
+                <option value="galar">Galar</option>
+                <option value="paldea">Paldea</option>
+              </select>
+            </div>
 
-          <!-- Button -->
-          <div class="button-85 w-100" role="button" onclick="genFullName()">
-            Generate Name
+            <!-- Button -->
+            <div
+              class="button-85 w-100"
+              role="button"
+              onclick="genFullName()"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              Generate Name
+            </div>
+          </form>
+        </div>
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">
+                  <div id="result"></div>
+                </h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">...</div>
+            </div>
           </div>
-        </form>
-        <div id="result"></div>
+        </div>
       </div>
     </main>
     <footer>
