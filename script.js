@@ -199,8 +199,8 @@ function genType(favoriteType) {
             return 'poison';
         case 'dark':
             return 'dark';
-        case 'Ghost':
-            return 'Ghost';
+        case 'ghost':
+            return 'ghost';
         case 'ground':
             return 'ground';
         case 'rock':
