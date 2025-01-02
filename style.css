@@ -59,6 +59,7 @@ label {
 .form-control:hover,
 .form-select:hover {
   border-color: #007bff;
+  border-width: 1.7px;
 }
 
 /* button css */
@@ -131,6 +132,9 @@ label {
   top: 0;
   border-radius: 10px;
 }
+#buttn {
+  padding-top: 2%;
+}
 
 /*modal css*/
 .modal-content {
@@ -141,6 +145,6 @@ label {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   border-radius: 20px;
-  padding: 3rem;
-  border: 3px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border: 2px solid rgba(255, 255, 255, 0.1);
 }

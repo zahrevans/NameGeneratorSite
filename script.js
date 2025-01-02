@@ -37,7 +37,7 @@ function genPrefix(favoriteRegion) {
 //generate first name of name
 function genFirstName(firstName) {
     const firstLetter = firstName.charAt(0).toLowerCase()
-    console.log(firstLetter)
+
     if (firstLetter === 'a') {
         return 'Abom'
     } else if (firstLetter === 'b') {
@@ -229,7 +229,7 @@ function genNature(favoriteType, preferredStat) {
         Speed: { flying: "Jolly", fire: "Naive", electric: "Timid", ghost: "Hasty", bug: "Quirky", dark: "Serious", water: "Gentle", psychic: "Timid" },
         Neutral: { any: ["Hardy", "Serious", "Bashful", "Docile", "Quirky"] },
     };
-    
+
 
     // Assign nature based on type and stat preference
     if (natureMap[preferredStat] && natureMap[preferredStat][favoriteType]) {
