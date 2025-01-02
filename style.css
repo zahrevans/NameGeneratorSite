@@ -5,12 +5,20 @@ body {
 h1 {
   color: white;
 }
-
+p {
+  color: white;
+}
 label {
   color: white;
 }
-.row { display: flex; flex-wrap: nowrap; } 
-.col { flex: 1; padding: 0 0.5rem; }
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.col {
+  flex: 1;
+  padding: 0 0.5rem;
+}
 .form-container {
   background-color: #ffffff;
   border-radius: 8px;
@@ -133,6 +141,6 @@ label {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   border-radius: 20px;
-  padding: 5rem;
+  padding: 3rem;
   border: 3px solid rgba(255, 255, 255, 0.1);
 }
