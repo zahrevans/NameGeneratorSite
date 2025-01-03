@@ -200,7 +200,7 @@ function genType(favoriteType) {
         case 'dark':
             return 'dark';
         case 'ghost':
-            return 'ghost';
+            return 'Ghost';
         case 'ground':
             return 'ground';
         case 'rock':
